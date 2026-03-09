@@ -1,0 +1,2 @@
+# Rebeka e a volta para casa
+Questão um pouco confusa, mas também simples, contei com a ajuda do Claude AI apenas para gerar inputs de teste e para encontrar pequenos erros no codigo que passaram despercebidos.
