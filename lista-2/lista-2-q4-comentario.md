@@ -1,0 +1,2 @@
+# Fuga no escuro
+Questão simples de lógica, mas complicada de execução. O texto estava um pouco confuso, mas como fiz uma questão parecida antes e com ajuda do test case com o resultado esperado, consegui fazer com mais tranquilidade.
