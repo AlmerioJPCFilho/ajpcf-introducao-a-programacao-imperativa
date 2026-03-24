@@ -1,0 +1,2 @@
+# Ana e os anagramas
+Questão relativamente fácil por já ter feito uma parecida anteriormente, logo a lógica não foi muito difícil de implementar, porém, alguns detalhes passaram despercebidos, como a filtragem de caracteres estranhos, o que pôde ser facilmente encontrado com ajuda do Gemini.
