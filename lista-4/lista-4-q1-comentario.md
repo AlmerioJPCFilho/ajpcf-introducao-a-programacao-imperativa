@@ -1,0 +1,2 @@
+# Enfeite da Praça
+Questão bastante simples, mas depois de pronta fui informado que seria obrigatório o uso de funções auxiliares, algo que eu não tenho muita prática em C, por isso precisei da ajuda do Gemini para ajustar as funções.

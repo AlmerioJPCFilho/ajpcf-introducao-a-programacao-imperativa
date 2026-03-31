@@ -1,0 +1,2 @@
+# Marquinhos e a goteira
+Questão um pouco complicada, mas com ajuda do Gemini, percebi que verificando a matriz de baixo para cima na função trajetoGota(), fica muito mais fácil de organizar a matriz, após isso a resolução fluiu bem.
