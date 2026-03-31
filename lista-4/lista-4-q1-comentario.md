@@ -1,2 +1,2 @@
-# Enfeite da Praça
-Questão bastante simples, mas depois de pronta fui informado que seria obrigatório o uso de funções auxiliares, algo que eu não tenho muita prática em C, por isso precisei da ajuda do Gemini para ajustar as funções.
+# A Fuga de Rebeka
+Questão consideravelmente mais difícil que as outras, a lógica já era conhecida, mas como eu não tinha prática com o algoritmo de backtracking, precisei da ajuda do Gemini.
