@@ -10,10 +10,14 @@ int main(){
     
     long long origem[2] = {0, 0};
     long long saida[2] = {0, 0};
-    long long passosFinal = 0;
+    long long passosFinal = 1000000;
     leMatriz(linhas, colunas, matriz, origem, saida);
     passosFinal = calcularPassos(linhas, colunas, matriz, origem[0], origem[1], saida[0], saida[1], 0);
-    printf("%lld\n", passosFinal);
+    if(passosFinal < 1000000){
+        printf("Apos correr %lld metros e quase desistir por causa da distância, Rebeka conseguiu escapar!\n", passosFinal);
+    }else{
+        printf("Poxa... Parece que nao foi dessa vez que Rebeka conseguiu fugir\n");
+    }
     return 0;
 }
 
