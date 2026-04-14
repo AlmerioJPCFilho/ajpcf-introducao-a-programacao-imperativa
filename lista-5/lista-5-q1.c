@@ -61,26 +61,25 @@ int main(){
 }
 
 void fundirCaracteres(char *str){
-    int fundiu = 1;
+    int i = 0;
 
-    while(fundiu){
-        fundiu = 0;
-        int i = 0;
-        while(str[i] != '\0' && str[i+1] != '\0'){
-            if(str[i] == str[i+1]){
-                if(str[i] == 'z'){//se for 'z', volta para 'a'
-                    str[i] = 'a';
-                }else{//se nao for 'z', avanca para o proximo caractere
-                    str[i] = str[i] + 1;
-                }
-                for(int j = i + 1; str[j] != '\0'; j++){
-                    str[j] = str[j+1]; //puxa os caracteres para a esquerda, apagando o que foi fundido
-                }
-                fundiu = 1;
-                i++;//avanca para o proximo caractere
-            }else{
-                i++; //avanca para o proximo caractere caso nao sejam iguais
+    while(str[i] != '\0' && str[i+1] != '\0'){
+        if(str[i] == str[i+1]){
+            if(str[i] == 'z'){//se for 'z', volta para 'a'
+                str[i] = 'a';
+            }else{//se nao for 'z', avanca para o proximo caractere
+                str[i]++;
             }
+            //puxa para a esquerda os caracteres seguintes
+            for(int j = i + 1; str[j] != '\0'; j++){
+                str[j] = str[j+1];
+            }
+            
+            if(i > 0){
+                i--;
+            }
+        }else{
+            i++;
         }
     }
 }
