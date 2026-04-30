@@ -1,0 +1,2 @@
+# Matriz dinâmica
+Questão mais complicada por se tratar de um conceito que não tenho costume. Utilizei o Gemini para me auxiliar a entender o conceito e pegar o jeito da estrutura de matrizes dinâmicas.
