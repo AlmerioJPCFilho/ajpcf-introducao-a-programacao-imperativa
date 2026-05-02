@@ -1,0 +1,2 @@
+# Espionagem na COPA
+Questão consideravelmente mais complicada que a anterior, solicitei ajuda do Gemini para entender como usar as funções adaptadas para structs, para encontrar funções que facilitem trabalhos como o de converter e verificar tipos e entender como usar o qsort.
