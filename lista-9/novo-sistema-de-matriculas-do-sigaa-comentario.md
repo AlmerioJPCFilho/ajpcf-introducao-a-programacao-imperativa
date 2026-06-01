@@ -1,0 +1,2 @@
+# Novo Sistema de Matrículas do SIGAA
+Questão bem mais trabalhosa que a primeira. Utilizei o gemini para me auxiliar na montagem das funções e para me familiarizar a um código envolvendo listas encadeadas.
