@@ -1,54 +1,94 @@
 #include <stdio.h>
+#include <stdlib.h>
+
+// ============================== estrutura dos nos ==============================
+typedef struct No{
+    char cor;
+    struct No *prox;
+}No;
+
+// ============================== funções para manipulação da pilha ==============================
+void empilhar(No **topo, char c);
+void desempilhar(No **topo);
 
 int main(){
-    char pilha[1000];
-    int topo = -1;
+    No *topo = NULL; // declara o primeiro  elemento da pilha
     char c;
 
     while(scanf(" %c", &c) != EOF){
         int processando = 1;
 
         while(processando){
-            if(topo >= 0){
-                char cTopo = pilha[topo];
+            if(topo != NULL){
+                char cTopo = topo->cor;
 
                 if((c == 'g' && cTopo == 'b') || (c == 'b' && cTopo == 'g')){
                     c = 'c'; // vira ciano
-                    topo--;
+                    desempilhar(&topo);
                     continue; // para checar o novo caractere
                 }
                 else if((c == 'r' && cTopo == 'b') || (c == 'b' && cTopo == 'r')){
                     c = 'm'; // vira magenta
-                    topo--;
+                    desempilhar(&topo);
                     continue; // para checar o novo caractere
                 }
                 else if((c == 'r' && cTopo == 'g') || (c == 'g' && cTopo == 'r')){
                     c = 'y'; // vira amarelo
-                    topo--;
+                    desempilhar(&topo);
                     continue; // para checar o novo caractere
                 }
             }
-            topo++; // empilha o caractere atual se nao combinou com nenhum do topo
-            pilha[topo] = c;
+            empilhar(&topo, c); // empilha o caractere atual se nao combinou com nenhum do topo
             processando = 0; // para o loop
 
-            if(topo >= 2){
-                if(pilha[topo] == pilha[topo-1] && pilha[topo-1] == pilha[topo-2]){
-                    topo -= 3;
+            if(topo != NULL && topo->prox != NULL && topo->prox->prox != NULL){ // verifica se tem 3 elementos para comparar
+                if((topo->cor == topo->prox->cor) && (topo->cor == topo->prox->prox->cor)){ // se os tres forem iguais
+                    // desempilha os tres do topo
+                    desempilhar(&topo);
+                    desempilhar(&topo);
+                    desempilhar(&topo);
                 }
             }
         }
 
-        if(topo == -1){
+        if(topo == NULL){
             printf("Pilha vazia!\n\n");
         }else{
-            for(int i = topo; i >= 0; i--){
-                printf("%c\n", pilha[i]);
+            No *atual = topo;
+
+            while(atual != NULL){
+                printf("%c\n", atual->cor);
+                atual = atual->prox;
             }
             printf("\n");
         }
     }
 
+    while(topo != NULL){ // limpa a pilha antes de finalizar
+        desempilhar(&topo);
+    }
+
     printf("Thank You So Much For Playing My Game!\n");
     return 0;
+}
+
+// ============================== funcoes para manipulação da pilha ==============================
+void empilhar(No **topo, char c){
+    No *novoNo = (No*)malloc(sizeof(No));
+    if(novoNo == NULL){
+        printf("Erro ao alocar memória!\n");
+        exit(1);
+    }
+    novoNo->cor = c;
+    novoNo->prox = *topo;
+    *topo = novoNo;
+}
+
+void desempilhar(No **topo){
+    if(*topo == NULL){
+        return;
+    }
+    No *temp = *topo;
+    *topo = temp->prox;
+    free(temp);
 }
