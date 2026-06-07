@@ -1,0 +1,2 @@
+# Ranking de Pontuações
+Questão bem difícil por, além do assunto novo, tratar de muitos assuntos antigos ao mesmo tempo. Utilizei o gemini para me ajudar a entender como fazer as funções e estuturar a árvore binária.
