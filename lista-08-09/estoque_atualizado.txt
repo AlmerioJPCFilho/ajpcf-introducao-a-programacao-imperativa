@@ -1,0 +1,4 @@
+101 teclado 5 150.00
+104 mouse 12 80.00
+110 monitor 3 900.00
+200 headset 0 250.00
